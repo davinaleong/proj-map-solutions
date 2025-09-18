@@ -1,4 +1,4 @@
-import { type State } from "../lib/types"
+import { type State } from "./../lib/types"
 
 interface FsmWidgetProps {
   state: State

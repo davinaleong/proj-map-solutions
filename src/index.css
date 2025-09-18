@@ -4,3 +4,7 @@ body {
   color: theme("colors.neutral.800");
   background-color: theme("colors.neutral.50");
 }
+
+.flow > * + * {
+  margin-top: theme("spacing.4");
+}
