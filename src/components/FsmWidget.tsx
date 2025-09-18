@@ -13,7 +13,7 @@ export function FsmWidget({ state }: FsmWidgetProps) {
       : "text-green-600"
 
   return (
-    <div className="fixed right-4 bottom-4 border-2 border-neutral-300 rounded-sm bg-neutral-50 text-center w-64 mx-auto shadow-sm text-sm">
+    <div className="fixed right-4 bottom-4 rounded-sm bg-neutral-50 text-center w-64 mx-auto shadow-sm text-sm">
       <h3 className="bg-neutral-200">Finite State Manager Widget</h3>
       <p className="text-neutral-500 flex gap-1 justify-center">
         <span>Current State:</span>
