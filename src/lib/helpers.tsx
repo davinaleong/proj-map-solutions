@@ -6,7 +6,7 @@ import Map from "../states/Map"
 export function fsm(state: State, event: Event): State {
   switch (state) {
     case "home":
-      if (event.type === "START") return "loading"
+      if (event.type === "RESOLVE") return event.target // go to grid or map
       return state
 
     case "grid":
@@ -15,7 +15,7 @@ export function fsm(state: State, event: Event): State {
       return state
 
     case "loading":
-      if (event.type === "RESOLVE") return "grid" // default after loading
+      if (event.type === "RESOLVE") return event.target
       if (event.type === "REJECT") return "error"
       return state
 

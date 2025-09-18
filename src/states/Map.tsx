@@ -1,7 +1,7 @@
 import React from "react"
 
-function Grid() {
-  return <div>Grid</div>
+function Map() {
+  return <div>Map</div>
 }
 
-export default Grid
+export default Map
