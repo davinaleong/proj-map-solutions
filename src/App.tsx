@@ -12,7 +12,7 @@ function App() {
   const [state, dispatch] = useReducer(fsm, "home" as State)
 
   return (
-    <div className="relative min-h-screen min-w-screen grid grid-rows-[min-content_auto_min-content] p-4 flow">
+    <div className="relative min-h-screen min-w-screen max-w-screen grid grid-rows-[min-content_auto_min-content] p-4 flow">
       <header>
         <h1 className="text-3xl font-bold flex gap-1 justify-center">
           <img src={IconEarth} alt="Earth Icon" width="20px" height="20px" />
