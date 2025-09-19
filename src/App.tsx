@@ -14,8 +14,11 @@ function App() {
   return (
     <div className="relative min-h-screen min-w-screen max-w-screen grid grid-rows-[min-content_auto_min-content] p-4 flow">
       <header>
-        <h1 className="text-3xl font-bold flex gap-1 justify-center">
-          <img src={IconEarth} alt="Earth Icon" width="20px" height="20px" />
+        <h1
+          className="text-3xl font-bold flex gap-1 justify-center cursor-pointer hover:opacity-70"
+          onClick={() => dispatch({ type: "RESET" })}
+        >
+          <img src={IconEarth} alt="Earth Icon" width="20" height="20" />
           Map Solutions
         </h1>
       </header>

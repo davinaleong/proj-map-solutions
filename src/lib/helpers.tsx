@@ -4,9 +4,11 @@ import Grid from "../states/Grid"
 import Map from "../states/Map"
 
 export function fsm(state: State, event: Event): State {
+  if (event.type === "RESET") return "home" // always go home
+
   switch (state) {
     case "home":
-      if (event.type === "RESOLVE") return event.target // go to grid or map
+      if (event.type === "RESOLVE") return event.target
       return state
 
     case "grid":
@@ -20,7 +22,6 @@ export function fsm(state: State, event: Event): State {
       return state
 
     case "error":
-      if (event.type === "RESET") return "home"
       return state
 
     default:

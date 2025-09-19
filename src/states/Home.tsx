@@ -11,20 +11,20 @@ function Home({ dispatch }: HomeProps) {
   return (
     <section className="container mx-auto min-h-full grid grid-cols-2 justify-center gap-2">
       <button
-        className="cursor-pointer text-neutral-800 text-5xl bg-neutral-50 rounded-sm shadow-sm hover:bg-neutral-100 font-bold flex gap-2 justify-center items-center"
+        className="cursor-pointer text-neutral-800 text-5xl bg-neutral-50 rounded-sm shadow-sm hover:bg-neutral-200 font-bold flow flex flex-col gap-2 justify-center items-center"
         type="button"
         onClick={() => dispatch({ type: "RESOLVE", target: "grid" } as any)}
       >
-        <img src={IconGrid} alt="Grid Icon" width="40px" height="40px" />
-        <span>Grid Solution</span>
+        <img src={IconGrid} alt="Grid Icon" width="80px" height="80px" />
+        <div>Grid Solution</div>
       </button>
       <button
-        className="cursor-pointer text-neutral-800 text-5xl bg-neutral-50 rounded-sm shadow-sm hover:bg-neutral-100 font-bold flex gap-2 justify-center items-center"
+        className="cursor-pointer text-neutral-800 text-5xl bg-neutral-50 rounded-sm shadow-sm hover:bg-neutral-200 font-bold flow flex flex-col gap-2 justify-center items-center"
         type="button"
         onClick={() => dispatch({ type: "RESOLVE", target: "map" } as any)}
       >
-        <img src={IconMap} alt="Map Icon" width="40px" height="40px" />
-        <span>Map Solution</span>
+        <img src={IconMap} alt="Map Icon" width="80px" height="80px" />
+        <div>Map Solution</div>
       </button>
     </section>
   )
