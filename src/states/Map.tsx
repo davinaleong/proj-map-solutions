@@ -1,5 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import MapHeader from "./../components/MapHeader"
+import { MapHotspot } from "./../components/MapHotspot"
+import { MapImage } from "./../components/MapImage"
+import { MapModal } from "./../components/MapModal"
 import {
   type ImageAsset,
   images,
@@ -10,6 +13,24 @@ import {
 const ImageMap: ImageAsset = images[0]
 
 function Map() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalImages, setModalImages] = useState<ImageAsset[]>([])
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const openModal = (imgs: ImageAsset[]) => {
+    setModalImages(imgs)
+    setCurrentImageIndex(0)
+    setIsModalOpen(true)
+  }
+
+  const handlePrev = () =>
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + modalImages.length) % modalImages.length
+    )
+
+  const handleNext = () =>
+    setCurrentImageIndex((prev) => (prev + 1) % modalImages.length)
+
   return (
     <>
       <article className="flow">
@@ -17,32 +38,34 @@ function Map() {
 
         <section className="relative min-h-screen grid place-items-center">
           <div className="relative w-full max-w-4xl">
-            <img
-              src={ImageMap.src}
-              alt={ImageMap.alt}
-              className="w-full h-auto object-cover rounded-sm shadow-sm"
+            <MapImage image={ImageMap} />
+
+            <MapHotspot
+              label="A"
+              top="57%"
+              left="47%"
+              onClick={() => openModal(samplePointAImages)}
             />
 
-            {/* Hotspot A */}
-            <button
-              className="cursor-pointer absolute uppercase font-bold w-[2ch] aspect-square bg-neutral-200 rounded-sm shadow-sm hover:opacity-70"
-              style={{ top: "57%", left: "47%" }}
-              type="button"
-            >
-              A
-            </button>
-
-            {/* Hotspot B */}
-            <button
-              className="cursor-pointer absolute uppercase font-bold w-[2ch] aspect-square bg-neutral-200 rounded-sm shadow-sm hover:opacity-70"
-              style={{ top: "59%", left: "45%" }}
-              type="button"
-            >
-              B
-            </button>
+            <MapHotspot
+              label="B"
+              top="59%"
+              left="45%"
+              onClick={() => openModal(samplePointBImages)}
+            />
           </div>
         </section>
       </article>
+
+      {isModalOpen && (
+        <MapModal
+          images={modalImages}
+          currentIndex={currentImageIndex}
+          onClose={() => setIsModalOpen(false)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+        />
+      )}
     </>
   )
 }
