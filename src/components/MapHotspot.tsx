@@ -1,5 +1,3 @@
-import React from "react"
-
 type MapHotspotProps = {
   label: string
   top: string

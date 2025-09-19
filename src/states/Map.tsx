@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import MapHeader from "./../components/MapHeader"
 import MapHotspot from "./../components/MapHotspot"
 import MapImage from "./../components/MapImage"

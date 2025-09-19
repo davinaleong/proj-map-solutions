@@ -1,4 +1,3 @@
-import React from "react"
 import { type ImageAsset } from "./../lib/images"
 
 type MapImageProps = {

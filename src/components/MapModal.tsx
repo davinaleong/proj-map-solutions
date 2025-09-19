@@ -1,4 +1,3 @@
-import React from "react"
 import Modal from "./Modal"
 import IconMoveLeft from "./../assets/icons/move-left.svg"
 import IconMoveRight from "./../assets/icons/move-right.svg"

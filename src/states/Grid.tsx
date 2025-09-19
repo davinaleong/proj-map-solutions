@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { type ImageAsset, images } from "./../lib/images"
 import Image0001 from "./../assets/images/0001.png"
 import GridHeader from "../components/GridHeader"
