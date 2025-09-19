@@ -20,7 +20,7 @@ function App() {
         </h1>
       </header>
 
-      <main className="p-4">
+      <main className="relative p-4">
         {state === "home" && <Home dispatch={dispatch} />}
         {state === "grid" && <Grid />}
         {state === "map" && <Map />}

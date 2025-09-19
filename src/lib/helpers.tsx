@@ -28,10 +28,10 @@ export function fsm(state: State, event: Event): State {
   }
 }
 
-export function renderState(state: State) {
+export function renderState(state: State, dispatch: (event: Event) => void) {
   switch (state) {
     case "home":
-      return <Home />
+      return <Home dispatch={dispatch} />
     case "grid":
       return <Grid />
     case "map":
