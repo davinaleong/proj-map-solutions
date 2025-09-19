@@ -5,7 +5,7 @@ type MapImageProps = {
   image: ImageAsset
 }
 
-export function MapImage({ image }: MapImageProps) {
+function MapImage({ image }: MapImageProps) {
   return (
     <img
       src={image.src}
@@ -14,3 +14,5 @@ export function MapImage({ image }: MapImageProps) {
     />
   )
 }
+
+export default MapImage

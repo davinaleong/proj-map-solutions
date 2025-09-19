@@ -12,7 +12,7 @@ function Grid() {
 
   return (
     <>
-      <article className="flow">
+      <article className="h-full flow">
         <GridHeader />
         <section className="grid grid-cols-2 grid-rows-2 gap-2 min-h-screen">
           <GridButton>

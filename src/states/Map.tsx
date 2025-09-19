@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import MapHeader from "./../components/MapHeader"
-import { MapHotspot } from "./../components/MapHotspot"
-import { MapImage } from "./../components/MapImage"
-import { MapModal } from "./../components/MapModal"
+import MapHotspot from "./../components/MapHotspot"
+import MapImage from "./../components/MapImage"
+import MapModal from "./../components/MapModal"
 import {
   type ImageAsset,
   images,
@@ -33,7 +33,7 @@ function Map() {
 
   return (
     <>
-      <article className="flow">
+      <article className="h-full flow">
         <MapHeader />
 
         <section className="relative min-h-screen grid place-items-center">

@@ -12,7 +12,7 @@ type MapModalProps = {
   onNext: () => void
 }
 
-export function MapModal({
+function MapModal({
   images,
   currentIndex,
   onClose,
@@ -54,3 +54,5 @@ export function MapModal({
     </Modal>
   )
 }
+
+export default MapModal

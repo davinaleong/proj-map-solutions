@@ -10,7 +10,7 @@ interface HomeProps {
 
 function Home({ dispatch }: HomeProps) {
   return (
-    <section className="container mx-auto min-h-full grid grid-cols-2 justify-center gap-2">
+    <section className="container mx-auto w-full h-full grid grid-cols-2 justify-center gap-2">
       <HomeButton
         icon={IconGrid}
         label="Grid Solution"
