@@ -18,7 +18,7 @@ function App() {
           className="text-3xl font-bold flex gap-1 justify-center cursor-pointer hover:opacity-70"
           onClick={() => dispatch({ type: "RESET" })}
         >
-          <img src={IconEarth} alt="Earth Icon" width="20" height="20" />
+          <img src={IconEarth} alt="Earth Icon" width="32px" height="32px" />
           Map Solutions
         </h1>
       </header>
